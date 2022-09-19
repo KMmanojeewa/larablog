@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Customer;
 use App\Models\CustomerAddress;
 use App\Models\CustomerPurchase;
+use App\Models\Package;
 use Illuminate\Database\Seeder;
 
 class CustomerSeeder extends Seeder
@@ -19,6 +20,7 @@ class CustomerSeeder extends Seeder
         Customer::factory(3)
             ->has(CustomerAddress::factory()->count(1), 'address')
             ->has(CustomerPurchase::factory()->count(2), 'purchases')
+            ->has(Package::factory()->count(3))
             ->create();
     }
 }

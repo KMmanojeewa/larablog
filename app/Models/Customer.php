@@ -21,5 +21,10 @@ class Customer extends Model
         return $this->hasMany(CustomerPurchase::class);
     }
 
+    public function packages()
+    {
+        return $this->belongsToMany(Package::class, 'customers_packages');
+    }
+
 
 }
