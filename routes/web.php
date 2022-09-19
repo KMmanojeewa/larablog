@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\UserController;
+use \App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,5 @@ Route::get('/login', [UserController::class, 'login']);
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::post('/logout', [UserController::class, 'logout']);
+
+Route::get('/admin', [AdminController::class, 'index']);

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Customer;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts', function () {
+Route::get('/customers', function () {
     return response()->json([
-        'posts' => [
-            'title' => 'sssssssss'
-        ]
+        'customers' => Customer::all()
     ]);
 });
 

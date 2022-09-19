@@ -40,6 +40,7 @@
             },
         };
     </script>
+    <script src="{{ mix('/js/app.js') }}" defer></script>
     <title>LaraGigs | Find Laravel Jobs & Projects</title>
 </head>
 <body class="mb-48">
