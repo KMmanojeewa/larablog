@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\UserController;
 use \App\Http\Controllers\AdminController;
+use \App\Http\Controllers\TutorialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,13 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 Route::post('/logout', [UserController::class, 'logout']);
 
 Route::get('/admin', [AdminController::class, 'index']);
+
+Route::get('/tutorial', [TutorialController::class, 'index']);
+
+Route::get('/tutorial/one', [TutorialController::class, 'singlerow']);
+Route::get('/tutorial/pluck', [TutorialController::class, 'pluck']);
+Route::get('/tutorial/chunks', [TutorialController::class, 'chunks']);
+Route::get('/tutorial/lazy', [TutorialController::class, 'lazy']);
+Route::get('/tutorial/join', [TutorialController::class, 'join']);
+Route::get('/tutorial/leftjoin', [TutorialController::class, 'leftjoin']);
+Route::get('/tutorial/rightjoin', [TutorialController::class, 'rightjoin']);
