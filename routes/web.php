@@ -5,6 +5,7 @@ use App\Http\Controllers\ListingController;
 use App\Http\Controllers\UserController;
 use \App\Http\Controllers\AdminController;
 use \App\Http\Controllers\TutorialController;
+use \App\Http\Controllers\QrCodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,6 @@ Route::get('/tutorial/lazy', [TutorialController::class, 'lazy']);
 Route::get('/tutorial/join', [TutorialController::class, 'join']);
 Route::get('/tutorial/leftjoin', [TutorialController::class, 'leftjoin']);
 Route::get('/tutorial/rightjoin', [TutorialController::class, 'rightjoin']);
+
+
+Route::get('/generate-qrcode', [QrCodeController::class, 'index']);
